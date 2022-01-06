@@ -5,11 +5,15 @@ using namespace std;
 class Solution {
     public:
         long long squaresInChessBoard(long long N) {
-            if(N == 1){
-                return 1;
-            }
+            //O(1) Approach
+            int sqrs = (N * (N+1) * (2 * N + 1)) / 6;
+            return sqrs;
 
-            return N*N + squaresInChessBoard(N-1);
+            //Recursive Approach
+            // if(N == 1){
+            //     return 1;
+            // }
+            // return N*N + squaresInChessBoard(N-1);
         }
 };
 
